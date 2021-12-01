@@ -1,5 +1,5 @@
-[[redirects]]
-  from = "/rpc/*"
-  to = "http://wxch-be.maxipool.net/rpc/:splat"
-  status = 200
-  force = true
+# [[redirects]]
+#   from = "/rpc/*"
+#   to = "http://wxch-be.maxipool.net/rpc/:splat"
+#   status = 200
+#   force = true
