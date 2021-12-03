@@ -1,5 +1,5 @@
 <template>
-    <!-- XCH to WXCH -->
+    <!-- NCH to WNCH -->
     <formLayout 
         :model="formData"
         ref="formLayout" 
@@ -12,13 +12,13 @@
         <!-- wxch -->
         <el-form-item prop="wxchAmount" >
             <div class="cus-label" slot="label">
-                <span>{{$t('home.block4.item1Name')}}({{$t('public.minimunQuantity')}}: {{conf.minimal_exchange_decimals}}WXCH)</span>
-                <div class="top-append">1 WXCH= {{1-(conf.wrap_fee_ratio/100)}} XCH</div>
+                <span>{{$t('home.block4.item1Name')}}({{$t('public.minimunQuantity')}}: {{conf.minimal_exchange_decimals}}WNCH)</span>
+                <div class="top-append">1 WNCH= {{1-(conf.wrap_fee_ratio/100)}} NCH</div>
             </div>
             <el-input v-model="formData.wxchAmount">
-                <template slot="append">WXCH</template>
+                <template slot="append">WNCH</template>
             </el-input>
-            <!-- <div class="el-form-item__append">WXCH</div> -->
+            <!-- <div class="el-form-item__append">WNCH</div> -->
         </el-form-item>
 
         <el-form-item >
@@ -27,9 +27,9 @@
             </div>
             <div class="el-input el-input-group el-input-group--append block">
                 <div class="el-input__inner ">{{xchAmount}}</div>
-                <div class="el-input-group__append">XCH</div>
+                <div class="el-input-group__append">NCH</div>
             </div>
-            <!-- <div class="el-form-item__append">XCH</div> -->
+            <!-- <div class="el-form-item__append">NCH</div> -->
         </el-form-item>
 
 
@@ -109,7 +109,7 @@ export default {
             },
             rules: {
                 wxchAmount: [
-                    {required: true, message: this.$t('msg.require', {val: 'WXCH'}), trigger:'change'},
+                    {required: true, message: this.$t('msg.require', {val: 'WNCH'}), trigger:'change'},
                     {validator: wxchAmountVaily, trigger: 'blur'}
                 ],
                 xchAddress: [
