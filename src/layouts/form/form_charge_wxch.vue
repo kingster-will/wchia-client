@@ -10,13 +10,13 @@
 
         <el-form-item prop="xchAmount" >
             <div class="cus-label" slot="label">
-                <span>{{$t('home.block3.item1Name')}}({{$t('public.minimunQuantity')}}: {{conf.minimal_exchange_decimals}}XCH)</span>
-                <div class="top-append">1 XCH= {{1-(conf.unwrap_fee_ratio/100)}} WXCH</div>
+                <span>{{$t('home.block3.item1Name')}}({{$t('public.minimunQuantity')}}: {{conf.minimal_exchange_decimals}}NCH)</span>
+                <div class="top-append">1 NCH= {{1-(conf.unwrap_fee_ratio/100)}} WNCH</div>
             </div>
             <el-input v-model="formData.xchAmount">
-                <template slot="append">XCH</template>
+                <template slot="append">NCH</template>
             </el-input>
-                <!-- <div class="el-form-item__append">XCH</div> -->
+                <!-- <div class="el-form-item__append">NCH</div> -->
         </el-form-item>
 
         <el-form-item >
@@ -26,7 +26,7 @@
             <!-- block -->
             <div class="el-input el-input-group el-input-group--append block">
                 <div class="el-input__inner ">{{wxchAmount}}</div>
-                <div class="el-input-group__append">WXCH</div>
+                <div class="el-input-group__append">WNCH</div>
             </div>
         </el-form-item>
 
@@ -96,7 +96,7 @@ export default {
             },
             rules: {
                 xchAmount: [
-                    {required: true, message: this.$t('msg.require', {val: 'WXCH'}), trigger:'change'},
+                    {required: true, message: this.$t('msg.require', {val: 'WNCH'}), trigger:'change'},
                     {validator: xchAmountVaily, trigger: 'blur'}
                 ],
             }
