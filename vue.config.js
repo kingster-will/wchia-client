@@ -2,6 +2,7 @@ const CompressionWebpackPlugin = require('compression-webpack-plugin')
 
 const productionGzipExtensions = ['js', 'css']
 const isProd = process.env.NODE_ENV === 'production'
+// trigger build
 module.exports = {
     publicPath: process.env.NODE_ENV === 'production' ? '/' : './',
     productionSourceMap: false,
