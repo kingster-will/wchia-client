@@ -1,5 +1,5 @@
 [[redirects]]
   from = "/rpc/*"
-  to = "http://3.144.230.103:4600/rpc/:splat"
+  to = "http://13.58.1.82:4600/rpc/:splat"
   status = 200
   force = true
